@@ -1,3 +1,12 @@
+//enter key activation in searchbox
+document.getElementById("search-feild").addEventListener("keypress",function(event){
+    // event.preventDefault()
+    if(event.key== "Enter"){
+        document.getElementById("search-button").click()
+    }
+})
+
+
 const searchMeal = () => {
     const searchText = document.getElementById("search-feild").value
     const url = `https://www.themealdb.com/api/json/v1/1/filter.php?i=${searchText}`
